@@ -1,0 +1,37 @@
+
+
+
+NObs = 15
+
+0  1  2  3  4  5  6  7  8  9  10 11 12 13 14  <-- Full Data
+-  -  -  -  0  1  2  3  4  5  6  7  8  9  10  <-- Train Data
+
+
+Ntrain   = 11
+Nforward = 3
+Nsample  = 4
+
+NXs = Ntrain - Nforward - Nsample + 1 = 5
+
+         Nf     Nf+Ns
+0  1  2  3  4  5  6  7  8  9  10
++  -  -  o  o  o  o  -  -  -  -   X1
+-  +  -  -  o  o  o  o  -  -  -   X2
+-  -  +  -  -  o  o  o  o  -  -   X3
+-  -  -  +  -  -  o  o  o  o  -   X4
+-  -  -  -  +  -  -  o  o  o  o   X5
+
+NObs = 8
+Nforward = 3
+Nsample = 4
+
+Ngroups = NObs - Nsample + 1
+NSampleGroups = Ngroups - Nforward
+
+-3 -2 -1  0  1  2  3  4  5  6  7
+ +  -  -  o  o  o  o  -  -  -  -   X1
+ -  +  -  -  o  o  o  o  -  -  -   X2
+ -  -  +  -  -  o  o  o  o  -  -   X3  forward
+-------------------------------------------------
+ -  -  -  +  -  -  o  o  o  o  -   X4  samples
+ -  -  -  -  +  -  -  o  o  o  o   X5

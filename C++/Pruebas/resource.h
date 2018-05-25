@@ -1,0 +1,4 @@
+#define IDR_THEMENU 100
+#define ID_FILE_EXIT 200
+#define IDD_SIMPLECONTROL 300
+#define ID_HELLO 400

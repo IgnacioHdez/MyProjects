@@ -1,0 +1,26 @@
+clear all
+%--Condiciones iniciales
+
+c=menu('Condiciones iniciales','Predefinidas','Aleatorias','Espiral','Esfera');
+
+if c==1
+    condinic
+elseif c==2 
+    condal
+elseif c==3
+   condespirales
+elseif c==3
+   condespirales
+end
+
+%--Método de Euler
+
+%euler
+
+%--Runge Kutta--
+
+run rungekutta
+
+%--Grafica de energías y trayectoria
+
+run plots

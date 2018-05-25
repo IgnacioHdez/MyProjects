@@ -1,0 +1,57 @@
+#include "C:\Users\Ignacio\Google Drive\Documentos\C++\Futil\futil.cpp"
+using namespace std;
+
+
+int main()
+{int n,j=2,h=1;
+n=10;
+double**A=numbersm(n,7,(double) 0);
+//Masa del sol
+A[0][0]=;
+//Masa de Mercurio
+A[1][0]=;
+//Masa de Venus
+A[2][0]=;
+//Masa de Tierra
+A[3][0]=;
+//Masa de Marte
+
+//Masa de Jupiter
+
+//Masa de Saturno
+
+//Masa de Urano
+
+//Masa de Neptuno
+
+//Masa de Pluton
+
+
+
+
+
+
+
+for(int i=1;i<n;i++)
+   {cout<<"Masa del planeta "<<i<<" (Kg): ";cin>>A[i][0];
+    cout<<"Distancia minima del planeta "<<i<<" al sol (km): ";cin>>A[i][h];
+    A[i][h]=A[i][h]*1000;
+    cout<<"Velocidad maxima del planeta "<<i<<" al sol (m/s): ";cin>>A[i][j+3];
+    h=h+1;
+    j=j+1;
+    if(h==3)
+   {h=1;}
+   if(j==3)
+   {j=1;}
+  }
+
+
+
+writem(n,7,A,"initgen.txt");
+double** B=numbersm(1,3,(double) 0);
+B[0][0]=n;
+cout<<"Tiempo de simulacion: ";cin>> B[0][2];
+cout<<"Numero de iteraciones: ";cin>> B[0][1];
+writem(n,7,A,"Casos/initgen.txt");
+writem(1,3,B,"Casos/condgen.txt");
+}
